@@ -20,8 +20,8 @@ class Home extends Component {
     console.log(query.get('code'));
     post("/api/token", {code: query.get('code')})
       .then((res) => {
-        console.log(res);
-        get('/api/top')
+        this.setState({access_token: res.token})
+        get('/api/top', {token: this.state.access_token})
           .then((tracks) => {
             console.log(tracks.tracks)
             // this.setState({topTracks: tracks.tracks});

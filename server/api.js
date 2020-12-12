@@ -42,7 +42,6 @@ router.post("/token", (req, res) => {
   spotifyApi.authorizationCodeGrant(req.body.code)
     .then(
       function(data) {
-        res.send({data: data, code: req.body.code});
         // console.log(req.body.code);
 
         // console.log('The token expires in ' + data.body['expires_in']);

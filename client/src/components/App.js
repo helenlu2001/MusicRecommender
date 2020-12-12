@@ -12,7 +12,7 @@ import Room from "./pages/Room.js"
 import "../utilities.css";
 import "./App.css";
 
-import { socket } from "../client-socket.js";
+// import { socket } from "../client-socket.js";
 
 import { get, post } from "../utilities";
 

@@ -29,7 +29,7 @@ const api = require("./api");
 const auth = require("./auth");
 
 // socket stuff
-const socket = require("./server-socket");
+// const socket = require("./server-socket");
 
 // Server configuration below
 // TODO change database name to the name you chose

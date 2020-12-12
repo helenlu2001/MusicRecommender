@@ -72,29 +72,29 @@ router.post("/token", (req, res) => {
 });
 
 router.get("/top", (req, res) => {
-  // let options = {
-  //   limit: 20,
-  //   time_range: 'long_term'
-  // };
-  res.send({tracks: 'hello world'});
+  let options = {
+    limit: 20,
+    time_range: 'long_term'
+  };
+
   // spotifyApi.setAccessToken(req.query.access_token);
-  // console.log('access token in top ' + spotifyApi.getAccessToken());
-  // spotifyApi.getMyTopTracks(options).then( (data) => {
-  //   console.log(data.body.items);
+  console.log('access token in top ' + spotifyApi.getAccessToken());
+  spotifyApi.getMyTopTracks(options).then( (data) => {
+    console.log(data.body.items);
 
-  //   tracks = data.body.items.map((track) => {
-  //     return {
-  //       title: track['name'],
-  //       artists: track['artists'].map((artist) => artist['name']), 
-  //       img: track['album']['images'][0]['url']
-  //     }
-  //   });
+    tracks = data.body.items.map((track) => {
+      return {
+        title: track['name'],
+        artists: track['artists'].map((artist) => artist['name']), 
+        img: track['album']['images'][0]['url']
+      }
+    });
 
-  //   res.send({tracks: tracks})
-  //  }
+    res.send({tracks: tracks})
+   }
 
   
-  // );
+  );
   // res.send({url: spotifyApi.createAuthorizeURL(SPOTIFY_SCOPES)});
 });
 

@@ -77,7 +77,7 @@ router.get("/top", (req, res) => {
     limit: 20,
     time_range: 'long_term'
   }
-  res.send({tracks: spotifyApi.getAccessToken()});
+  res.send({tracks: 'hello world'});
   // spotifyApi.setAccessToken('BQAk5rpJ-dlDBVX2UTGo3eoLXMN0bGQRqO3eA0zm5zdXDxCjSG_rw5RhhEEvVDztzTxmgyK_g--vtS5koOmVZK6TzXwRVG9srqHfE8vngnpIeJR3zseD7ZDJze6uN4gp6ZsTpNY1ohJfrTkJpLJ96uh9DGaFPEAGmmVDdwjJPl6ZYqIg396oH-scsGHZ');
   // console.log('access token in top ' + spotifyApi.getAccessToken());
   // spotifyApi.getMyTopTracks(options).then( (data) => {

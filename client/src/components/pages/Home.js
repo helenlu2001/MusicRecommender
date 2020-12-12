@@ -24,7 +24,7 @@ class Home extends Component {
         get('/api/top')
           .then((tracks) => {
             console.log(tracks.tracks)
-            this.setState({topTracks: tracks.tracks});
+            // this.setState({topTracks: tracks.tracks});
           });
       });
 
